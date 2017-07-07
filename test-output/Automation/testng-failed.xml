@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Automation]">
+  <listeners>
+    <listener class-name="com.seetest.extent.ExtentReporter"/>
+  </listeners>
+  <test name="sampleAndroid(failed)">
+    <classes>
+      <class name="Seetest.SampleAndroidTest">
+        <methods>
+          <include name="init"/>
+          <include name="test2"/>
+        </methods>
+      </class> <!-- Seetest.SampleAndroidTest -->
+    </classes>
+  </test> <!-- sampleAndroid(failed) -->
+</suite> <!-- Failed suite [Automation] -->

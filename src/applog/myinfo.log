@@ -1,0 +1,7 @@
+2017-07-07 18:23:42,664 - rootLogger - INFO - Loaded the following properties TimeOut :10 RetryCount :5
+2017-07-07 18:23:45,850 - rootLogger - INFO - The element By.xpath: //*[@id='usernameTextField'] is displayed
+2017-07-07 18:23:56,715 - rootLogger - INFO - Typed the value company in to object By.xpath: //*[@id='usernameTextField']
+2017-07-07 18:24:00,475 - rootLogger - INFO - The element By.xpath: //*[@id='passwordTextField'] is displayed
+2017-07-07 18:24:11,645 - rootLogger - INFO - Typed the value company in to object By.xpath: //*[@id='passwordTextField']
+2017-07-07 18:24:15,157 - rootLogger - INFO - The element By.xpath: //*[@text='Login'] is displayed
+2017-07-07 18:24:17,377 - rootLogger - INFO - Clicked on the objectBy.xpath: //*[@text='Login']
