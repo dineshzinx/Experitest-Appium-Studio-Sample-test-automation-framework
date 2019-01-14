@@ -29,7 +29,8 @@
 
 <dependencies>
 
-<dependency>
+<!-- <dependency>
+
 <groupId>com.experitest</groupId>
 <artifactId>seetest-appium</artifactId>
 <version>10.8</version>
@@ -40,7 +41,13 @@
     <artifactId>java-client</artifactId>
     <version>5.0.0-BETA9</version>
 </dependency>
-
+ -->
+  <dependency>
+    <groupId>com.experitest</groupId>
+    <artifactId>appium</artifactId>
+    <version>4.1.2</version>
+    </dependency>
+ 
 <dependency>
     <groupId>org.seleniumhq.selenium</groupId>
     <artifactId>selenium-java</artifactId>
