@@ -2,56 +2,56 @@
 <testng-results skipped="0" failed="1" ignored="0" total="2" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Automation" duration-ms="47296" started-at="2017-07-07T12:53:42Z" finished-at="2017-07-07T12:54:29Z">
+  <suite name="Automation" duration-ms="19680" started-at="2019-01-14T18:38:53Z" finished-at="2019-01-14T18:39:13Z">
     <groups>
     </groups>
-    <test name="sampleAndroid" duration-ms="47296" started-at="2017-07-07T12:53:42Z" finished-at="2017-07-07T12:54:29Z">
+    <test name="sampleAndroid" duration-ms="19680" started-at="2019-01-14T18:38:53Z" finished-at="2019-01-14T18:39:13Z">
       <class name="Seetest.SampleAndroidTest">
-        <test-method status="PASS" signature="init()[pri:0, instance:Seetest.SampleAndroidTest@3dd4520b]" name="init" is-config="true" duration-ms="11982" started-at="2017-07-07T18:23:30Z" finished-at="2017-07-07T18:23:42Z">
+        <test-method status="PASS" signature="init()[pri:0, instance:Seetest.SampleAndroidTest@3e96bacf]" name="init" is-config="true" duration-ms="11236" started-at="2019-01-14T18:38:42Z" finished-at="2019-01-14T18:38:53Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method status="PASS" signature="test1()[pri:0, instance:Seetest.SampleAndroidTest@3dd4520b]" name="test1" duration-ms="34594" started-at="2017-07-07T18:23:42Z" finished-at="2017-07-07T18:24:17Z">
+        <test-method status="PASS" signature="test1()[pri:0, instance:Seetest.SampleAndroidTest@3e96bacf]" name="test1" duration-ms="7463" started-at="2019-01-14T18:38:53Z" finished-at="2019-01-14T18:39:01Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test1 -->
-        <test-method status="FAIL" signature="test2()[pri:0, instance:Seetest.SampleAndroidTest@3dd4520b]" name="test2" duration-ms="11231" started-at="2017-07-07T18:24:17Z" finished-at="2017-07-07T18:24:28Z">
+        <test-method status="FAIL" signature="test2()[pri:0, instance:Seetest.SampleAndroidTest@3e96bacf]" name="test2" duration-ms="10932" started-at="2019-01-14T18:39:01Z" finished-at="2019-01-14T18:39:12Z">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[The following asserts failed:
-	ElementBy.xpath: //*[@text='test'] is not visible expected [true] but found [false]]]>
+ElementBy.xpath: //*[@text='test'] is not visible expected [true] but found [false]]]>
             </message>
             <full-stacktrace>
               <![CDATA[java.lang.AssertionError: The following asserts failed:
-	ElementBy.xpath: //*[@text='test'] is not visible expected [true] but found [false]
-	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:43)
-	at com.seetest.driverInstance.SeetestCommandBase.verifyElementPresent(SeetestCommandBase.java:107)
-	at Seetest.SampleAndroidTest.test2(SampleAndroidTest.java:33)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-	at org.testng.TestRunner.privateRun(TestRunner.java:744)
-	at org.testng.TestRunner.run(TestRunner.java:602)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
-	at org.testng.TestNG.runSuites(TestNG.java:1144)
-	at org.testng.TestNG.run(TestNG.java:1115)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:230)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)
+ElementBy.xpath: //*[@text='test'] is not visible expected [true] but found [false]
+at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:43)
+at com.seetest.driverInstance.SeetestCommandBase.verifyElementPresent(SeetestCommandBase.java:107)
+at Seetest.SampleAndroidTest.test2(SampleAndroidTest.java:33)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.lang.reflect.Method.invoke(Method.java:498)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
           </exception> <!-- java.lang.AssertionError -->

@@ -4,7 +4,7 @@
   <listeners>
     <listener class-name="com.seetest.extent.ExtentReporter"/>
   </listeners>
-  <test name="sampleAndroid(failed)">
+  <test thread-count="5" name="sampleAndroid(failed)">
     <classes>
       <class name="Seetest.SampleAndroidTest">
         <methods>

@@ -9,6 +9,7 @@ import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
+
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
@@ -16,12 +17,11 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.asserts.SoftAssert;
-import com.experitest.appium.SeeTestAndroidDriver;
-import com.experitest.appium.SeeTestAndroidElement;
-import com.experitest.appium.SeeTestIOSDriver;
 import com.google.common.collect.Ordering;
 import com.seetest.extent.ExtentReporter;
 import com.seetest.propertyfilereader.PropertyFileReader;
+import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.ios.IOSDriver;
 
 /**
  * @author VDINESH
@@ -43,10 +43,10 @@ public class SeetestCommandBase extends SeetestDriverInstance {
 	final static Logger logger = Logger.getLogger("rootLogger");
 
 	/** The Android driver. */
-	public SeeTestAndroidDriver<SeeTestAndroidElement> androidDriver;
+	public AndroidDriver<WebElement> androidDriver;
 	
 	/** The Android driver. */
-	public SeeTestIOSDriver<WebElement> iOSDriver;
+	public IOSDriver<WebElement> iOSDriver;
 	
 
 	public int getTimeout() {
@@ -614,9 +614,9 @@ public class SeetestCommandBase extends SeetestDriverInstance {
       public void launchiOSApp(String bundleID){
 	
 	     try {
-	    	iOSDriver = (SeeTestIOSDriver<WebElement>)getDriver();
-		    iOSDriver.launchApp(bundleID);
-		    logger.info("Started the bundle id" +" "+bundleID);
+	    	iOSDriver = (IOSDriver<WebElement>) getDriver();
+		    iOSDriver.launchApp();
+		     logger.info("Started the bundle id" +" "+bundleID);
 		    extent.extentLogger("Started the bundle id" +" "+bundleID, "Started the bundle id" +" "+bundleID);
 	       } catch (Exception e) {
 		    logger.info("Unable to Start the bundle id" +" "+bundleID);
@@ -631,8 +631,8 @@ public class SeetestCommandBase extends SeetestDriverInstance {
     public void closeIosKeyboard() {
 
     	try {
-    		iOSDriver = (SeeTestIOSDriver<WebElement>)getDriver();
-    		iOSDriver.closeKeyboard();
+    		iOSDriver = (IOSDriver<WebElement>) getDriver();
+		    iOSDriver.hideKeyboard();
     		extent.extentLogger("Hiding keyboard successful", "Hiding keyboard successful");
 		} catch (Exception e) {
 			extent.extentLogger("Hiding keyboard not successful", "Hiding keyboard not successful");
@@ -644,7 +644,6 @@ public class SeetestCommandBase extends SeetestDriverInstance {
      */
     public void closeiOSApp() {
     	try {
-           iOSDriver = (SeeTestIOSDriver<WebElement>) getDriver();
            iOSDriver.closeApp();
            extent.extentLogger("Killed the appliaction successfully", "Killed the appliaction successfully");
 		} catch (Exception e) {
