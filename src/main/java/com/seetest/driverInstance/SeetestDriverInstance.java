@@ -4,11 +4,10 @@ import java.net.URL;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.DesiredCapabilities;
-import com.experitest.appium.SeeTestAndroidDriver;
-import com.experitest.appium.SeeTestCapabilityType;
-import com.experitest.appium.SeeTestIOSDriver;
 import com.seetest.propertyfilereader.PropertyFileReader;
 import io.appium.java_client.AppiumDriver;
+import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.remote.AndroidMobileCapabilityType;
 import io.appium.java_client.remote.IOSMobileCapabilityType;
 import io.appium.java_client.remote.MobileCapabilityType;
@@ -80,9 +79,9 @@ public class SeetestDriverInstance {
 	init();
 	String remoteUrl = "http://" + getHost() + ":" + getPort() + "/wd/hub";
 	if ("Android".equalsIgnoreCase(getPlatform())) {
-	driver = (AppiumDriver<WebElement>)new SeeTestAndroidDriver<WebElement>(new URL(remoteUrl), this.generateAndroidCapabilities(Application));
+	driver = (AppiumDriver<WebElement>)new AndroidDriver<WebElement>(new URL(remoteUrl), this.generateAndroidCapabilities(Application));
 	} else if ("iOS".equalsIgnoreCase(getPlatform())) {
-	driver = (AppiumDriver<WebElement>) new SeeTestIOSDriver<WebElement>(new URL(remoteUrl), this.generateiOSCapabilities(Application));
+	driver = (AppiumDriver<WebElement>) new IOSDriver<WebElement>(new URL(remoteUrl), this.generateiOSCapabilities(Application));
 	} else {
 	throw new Exception("Given platform is not implemented.");
 	}
@@ -112,8 +111,8 @@ public class SeetestDriverInstance {
 		
 		DesiredCapabilities capabilities = new DesiredCapabilities();
 		capabilities.setCapability(MobileCapabilityType.FULL_RESET,true);
-        capabilities.setCapability(SeeTestCapabilityType.REPORT_DIRECTORY, reportDirectory);
-		capabilities.setCapability(SeeTestCapabilityType.REPORT_FORMAT, reportFormat);
+        capabilities.setCapability("reportDirectory", reportDirectory);
+		capabilities.setCapability("reportFormat", reportFormat);
 		
 		if (application.equalsIgnoreCase("Eribank")) {
 			capabilities.setCapability("app", System.getProperty("user.dir") + "/apps/android/EriBank.apk");
@@ -133,7 +132,7 @@ public class SeetestDriverInstance {
 	
 	DesiredCapabilities capabilities = new DesiredCapabilities();
 	capabilities.setCapability(MobileCapabilityType.FULL_RESET,true);
-	capabilities.setCapability(SeeTestCapabilityType.INSTRUMENT_APP, true);
+	capabilities.setCapability("instrumentApp", true);
 	if (application.equalsIgnoreCase("Eribank")) {
 		capabilities.setCapability("app", System.getProperty("user.dir") + "/apps/ios/EriBank.ipa");
 		capabilities.setCapability(IOSMobileCapabilityType.BUNDLE_ID, "com.experitest.ExperiBank");	
